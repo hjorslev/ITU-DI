@@ -1,0 +1,41 @@
+html, body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+#map {
+	top: 0;
+	left: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.transport-selection {
+	position: fixed;
+	left: 150px;
+	top: 10px;
+	z-index: 1000;
+	width: 600px;
+}
+
+.select2-container {
+	min-width: 400px;
+}
+
+.overlay {
+	padding: 7px;
+	color: #333;
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.6);
+	z-index: 10;
+	position: fixed;
+	top: 10px;
+	left: 60px;
+}
+
+.overlay input {
+	padding: 2px;
+}
