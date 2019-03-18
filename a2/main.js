@@ -21,7 +21,7 @@ $(function () {
     $('input.range').attr('value', initRadius);
 
     // Dark layer
-    var coverageLayer = new L.TileLayer.MaskCanvas({ 'opacity': 0.59, radius: initRadius, useAbsoluteRadius: true, 'attribution': '' });
+    var coverageLayer = new L.TileLayer.MaskCanvas({ 'opacity': 0.99, radius: initRadius, useAbsoluteRadius: true, 'attribution': '' });
 
     // When the location is found, run the function "onLocationFound"
     map.on('locationfound', onLocationFound);
@@ -44,7 +44,7 @@ $(function () {
 
         // Set up overlays
         coverageLayer.setData(data);
-        map.fitBounds(coverageLayer.bounds);
         map.addLayer(coverageLayer);
     }
+	map.fitBounds(coverageLayer.bounds);
 });
