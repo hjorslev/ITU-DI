@@ -2,7 +2,6 @@ $(function () {
     var position = {};
     // var data = '[[55.65969286655917, 12.591260075569155], [55.660189901330526, 12.591539025306703], [55.66017628402361, 12.590334713459017], [55.660226214125785, 12.589370459318163], [55.660192170881196, 12.592247128486635], [55.66015207546631, 12.593153715133669], [55.66042442087282, 12.592319548130035]]'
     var data = [[0, 0]];
-    var coord
     var lat
     var lng
 
@@ -46,5 +45,5 @@ $(function () {
         coverageLayer.setData(data);
         map.addLayer(coverageLayer);
     }
-	map.fitBounds(coverageLayer.bounds);
+    map.fitBounds(coverageLayer.bounds);
 });
