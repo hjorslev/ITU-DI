@@ -1,0 +1,5 @@
+{
+    "board": "arduino:avr:megaADK",
+    "sketch": "buzzer.ino",
+    "port": "COM3"
+}
