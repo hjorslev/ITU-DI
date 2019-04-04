@@ -97,7 +97,7 @@
 #define NOTE_DS8 4978
 
 // Pin that is used for the speaker.
-#define melodyPin 8
+#define melodyPin 22 // Blue wire
 
 //Mario main theme melody
 int melody[] = {
@@ -128,9 +128,9 @@ int tempo[] = {
 // LED MATRIX
 ///////////////////////////////////////////////////////////////
 // Pins used for the LED Matrix
-const int DIN_PIN = 50;
-const int CS_PIN = 53;
-const int CLK_PIN = 51;
+const int DIN_PIN = 51; // yellow wire
+const int CS_PIN = 52;  // orange wire
+const int CLK_PIN = 53; // white wire
 
 // Happy smiley
 const uint64_t SMILEY_HAPPY[] = {
@@ -166,7 +166,9 @@ delay(1000);
 // SENSORS
 ///////////////////////////////////////////////////////////////
 // Each sensor's trigger pin, echo pin, and max distance to ping.
-NewPing dispenser(5, 4, 50);
+// Pin 13 = Trigger (orange wire)
+// Pin 12 = Echo (white wire)
+NewPing dispenser(13, 12, 50);
 NewPing door(3, 2, 200);
 
 CapacitiveSensor cs_dispenser = CapacitiveSensor(10, 8); // 1M resistor between pins 10 & 8, pin 8 is sensor pin
