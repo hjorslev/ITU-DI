@@ -168,8 +168,7 @@ delay(1000);
 // Each sensor's trigger pin, echo pin, and max distance to ping.
 // Pin 13 = Trigger (orange wire)
 // Pin 12 = Echo (white wire)
-NewPing dispenser(13, 12, 50);
-NewPing door(3, 2, 200);
+NewPing door(13, 12, 200);
 
 CapacitiveSensor cs_dispenser = CapacitiveSensor(10, 8); // 1M resistor between pins 10 & 8, pin 8 is sensor pin
 
@@ -188,7 +187,7 @@ int dispenser_delay = 2000;
 
 void setup()
 {
-  Serial.begin(9600);         // Open serial monitor at 9600 baud to see ping results.
+  Serial.begin(115200);       // Open serial monitor at 9600 baud to see ping results.
   pinMode(melodyPin, OUTPUT); //buzzer
   pinMode(13, OUTPUT);        //led indicator when singing a note
 }
